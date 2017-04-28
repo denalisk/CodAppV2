@@ -41,5 +41,19 @@ namespace CodApp.Controllers
                 .FirstOrDefault(m => m.Id == id);
             return View(currentNewsletter);
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Newsletter newsletter)
+        {
+            var newNewsletter = new Newsletter { Title = newsletter.Title, Content = newsletter.Content };
+            _db.Newsletters.Add(newNewsletter);
+            _db.SaveChanges();
+            return View("Index");
+        }
     }
 }
