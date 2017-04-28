@@ -1,5 +1,5 @@
---temp-output:C:\Users\epicodus\Documents\Visual Studio 2015\Projects\CodApp\src\CodApp\obj\Debug\netcoreapp1.0\
---out:C:\Users\epicodus\Documents\Visual Studio 2015\Projects\CodApp\src\CodApp\bin\Debug\netcoreapp1.0\CodApp.dll
+--temp-output:c:\Users\epicodus\documents\visual studio 2015\Projects\CodApp\src\CodApp\obj\Debug\netcoreapp1.0\
+--out:c:\Users\epicodus\documents\visual studio 2015\Projects\CodApp\src\CodApp\bin\Debug\netcoreapp1.0\CodApp.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -200,17 +200,17 @@
 --reference:C:\Users\epicodus\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\epicodus\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\epicodus\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
---resource:"C:\Users\epicodus\Documents\Visual Studio 2015\Projects\CodApp\src\CodApp\obj\Debug\netcoreapp1.0\CodAppdotnet-compile.deps.json",CodApp.deps.json
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\CodApp\src\CodApp\Program.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\CodApp\src\CodApp\Startup.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\CodApp\src\CodApp\Controllers\AdministratorController.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\CodApp\src\CodApp\Controllers\HomeController.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\CodApp\src\CodApp\Controllers\NewsletterController.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\CodApp\src\CodApp\Migrations\20170428161349_Initial.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\CodApp\src\CodApp\Migrations\20170428161349_Initial.Designer.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\CodApp\src\CodApp\Migrations\CodAppDbContextModelSnapshot.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\CodApp\src\CodApp\Models\Admin.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\CodApp\src\CodApp\Models\CodAppDbContext.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\CodApp\src\CodApp\Models\Reader.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\CodApp\src\CodApp\ViewModels\LoginViewModel.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\CodApp\src\CodApp\ViewModels\RegisterViewModel.cs
+--resource:"c:\Users\epicodus\documents\visual studio 2015\Projects\CodApp\src\CodApp\obj\Debug\netcoreapp1.0\CodAppdotnet-compile.deps.json",CodApp.deps.json
+c:\Users\epicodus\documents\visual studio 2015\Projects\CodApp\src\CodApp\Program.cs
+c:\Users\epicodus\documents\visual studio 2015\Projects\CodApp\src\CodApp\Startup.cs
+c:\Users\epicodus\documents\visual studio 2015\Projects\CodApp\src\CodApp\Controllers\AdministratorController.cs
+c:\Users\epicodus\documents\visual studio 2015\Projects\CodApp\src\CodApp\Controllers\HomeController.cs
+c:\Users\epicodus\documents\visual studio 2015\Projects\CodApp\src\CodApp\Controllers\NewsletterController.cs
+c:\Users\epicodus\documents\visual studio 2015\Projects\CodApp\src\CodApp\Migrations\20170428161349_Initial.cs
+c:\Users\epicodus\documents\visual studio 2015\Projects\CodApp\src\CodApp\Migrations\20170428161349_Initial.Designer.cs
+c:\Users\epicodus\documents\visual studio 2015\Projects\CodApp\src\CodApp\Migrations\CodAppDbContextModelSnapshot.cs
+c:\Users\epicodus\documents\visual studio 2015\Projects\CodApp\src\CodApp\Models\Admin.cs
+c:\Users\epicodus\documents\visual studio 2015\Projects\CodApp\src\CodApp\Models\CodAppDbContext.cs
+c:\Users\epicodus\documents\visual studio 2015\Projects\CodApp\src\CodApp\Models\Reader.cs
+c:\Users\epicodus\documents\visual studio 2015\Projects\CodApp\src\CodApp\ViewModels\LoginViewModel.cs
+c:\Users\epicodus\documents\visual studio 2015\Projects\CodApp\src\CodApp\ViewModels\RegisterViewModel.cs
