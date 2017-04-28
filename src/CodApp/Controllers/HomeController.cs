@@ -23,16 +23,45 @@ namespace CodApp.Controllers
 
         public IActionResult Index()
         {
-            var currentArticle = _db.Articles.FirstOrDefault(m => m.Id == 1);
+            var bannerArticle = _db.Articles.FirstOrDefault(m => m.PageLabel == "Banner");
+            var banner2Article = _db.Articles.FirstOrDefault(m => m.PageLabel == "Banner2");
+            var banner3Article = _db.Articles.FirstOrDefault(m => m.PageLabel == "Banner3");
+            var blurb1Article = _db.Articles.FirstOrDefault(m => m.PageLabel == "Blurb1");
+            var blurb2Article = _db.Articles.FirstOrDefault(m => m.PageLabel == "Blurb2");
+            var blurb3Article = _db.Articles.FirstOrDefault(m => m.PageLabel == "Blurb3");
+            var blurb4Article = _db.Articles.FirstOrDefault(m => m.PageLabel == "Blurb4");
+            var taglineArticle = _db.Articles.FirstOrDefault(m => m.PageLabel == "Tagline");
             Dictionary<string, Article> homeDictionary = new Dictionary<string, Article> { };
-            homeDictionary["Banner"] = currentArticle;
-            homeDictionary["Tagline"] = currentArticle;
-            homeDictionary["Banner2"] = currentArticle;
-            homeDictionary["Banner3"] = currentArticle;
-            homeDictionary["Blurb1"] = currentArticle;
-            homeDictionary["Blurb2"] = currentArticle;
-            homeDictionary["Blurb3"] = currentArticle;
-            homeDictionary["Blurb4"] = currentArticle;
+            homeDictionary["Banner"] = bannerArticle;
+            homeDictionary["Tagline"] = taglineArticle;
+            homeDictionary["Banner2"] = banner2Article;
+            homeDictionary["Banner3"] = banner3Article;
+            homeDictionary["Blurb1"] = blurb1Article;
+            homeDictionary["Blurb2"] = blurb2Article;
+            homeDictionary["Blurb3"] = blurb3Article;
+            homeDictionary["Blurb4"] = blurb4Article;
+            return View(homeDictionary);
+        }
+
+        public IActionResult EditHome()
+        {
+            var bannerArticle = _db.Articles.FirstOrDefault(m => m.PageLabel == "Banner");
+            var banner2Article = _db.Articles.FirstOrDefault(m => m.PageLabel == "Banner2");
+            var banner3Article = _db.Articles.FirstOrDefault(m => m.PageLabel == "Banner3");
+            var blurb1Article = _db.Articles.FirstOrDefault(m => m.PageLabel == "Blurb1");
+            var blurb2Article = _db.Articles.FirstOrDefault(m => m.PageLabel == "Blurb2");
+            var blurb3Article = _db.Articles.FirstOrDefault(m => m.PageLabel == "Blurb3");
+            var blurb4Article = _db.Articles.FirstOrDefault(m => m.PageLabel == "Blurb4");
+            var taglineArticle = _db.Articles.FirstOrDefault(m => m.PageLabel == "Tagline");
+            Dictionary<string, Article> homeDictionary = new Dictionary<string, Article> { };
+            homeDictionary["Banner"] = bannerArticle;
+            homeDictionary["Tagline"] = taglineArticle;
+            homeDictionary["Banner2"] = banner2Article;
+            homeDictionary["Banner3"] = banner3Article;
+            homeDictionary["Blurb1"] = blurb1Article;
+            homeDictionary["Blurb2"] = blurb2Article;
+            homeDictionary["Blurb3"] = blurb3Article;
+            homeDictionary["Blurb4"] = blurb4Article;
             return View(homeDictionary);
         }
     }
