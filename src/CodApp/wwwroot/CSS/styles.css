@@ -1,28 +1,41 @@
 ﻿div.bottom-section {
-  border-top: 1px solid red;
-  height: 70%;
+  border-top: 1px solid gray;
+  height: 40px;
 }
 
 div.link-holder {
+    margin-top: 10px;
+    color: black;
     position: relative;
-    margin-left: 75%;
+    margin-left: 60%;
+}
+
+div.link-holder a {
+    color: black;
+    font-size: 15px;
+}
+
+div.nav-bar-holder {
+    height: 100%;
 }
 
 div.overlay-images {
-    margin-left: 25%
-    width: 50%;
-    float: left;
+    position: absolute;
+    z-index: 10;
+    left: 15%;
+    top: 0px;
+    width: 40%;
 }
 
 div.overlay-images img {
-    width: 100%;
     max-width: 150px;
+    width: 100%;
 }
 
 div.top-section {
-  background-color: gray;
-  height: 50%;
-  border-bottom: 1px solid darkgrey;
+  background-color: lightgray;
+  height: 30px;
+  border-bottom: .25px solid gray;
 }
 
 div.top-buffer {
