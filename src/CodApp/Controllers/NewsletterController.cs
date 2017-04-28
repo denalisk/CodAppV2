@@ -56,6 +56,17 @@ namespace CodApp.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpPost]
+        public IActionResult AddArticle(Article article)
+        {
+            int targetNewsletterId = Int32.Parse(this.Request.Form["NewsletterId"]);
+            var currentNewsletter = _db.Newsletters.FirstOrDefault(newsletters => newsletters.Id == targetNewsletterId);
+            var newArticle = new Article { Title = article.Title, Content = article.Content, ImageSrcString = article.ImageSrcString };
+            newArticle.Newsletter = currentNewsletter;
+            _db.Articles.Add(newArticle);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
     }
 }

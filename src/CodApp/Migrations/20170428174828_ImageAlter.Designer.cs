@@ -8,9 +8,10 @@ using CodApp.Models;
 namespace CodApp.Migrations
 {
     [DbContext(typeof(CodAppDbContext))]
-    partial class CodAppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170428174828_ImageAlter")]
+    partial class ImageAlter
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")
@@ -228,7 +229,7 @@ namespace CodApp.Migrations
 
             modelBuilder.Entity("CodApp.Models.Article", b =>
                 {
-                    b.HasOne("CodApp.Models.Newsletter", "Newsletter")
+                    b.HasOne("CodApp.Models.Newsletter")
                         .WithMany("Articles")
                         .HasForeignKey("NewsletterId");
                 });

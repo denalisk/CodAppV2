@@ -15,5 +15,6 @@ namespace CodApp.Models
         public string Title { get; set; }
         public string Content { get; set; }
         public string ImageSrcString { get; set; }
+        public virtual Newsletter Newsletter { get; set; }
     }
 }

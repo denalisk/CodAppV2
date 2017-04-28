@@ -4,6 +4,8 @@
 
 @using (Html.BeginForm("AddArticle", "Newsletter"))
 {
+    @Html.Hidden("NewsletterId")
+
     @Html.LabelFor(m => m.Title)
     @Html.TextBoxFor(m => m.Title)
 
@@ -11,7 +13,7 @@
     @Html.TextBoxFor(m => m.Content)
 
     @Html.LabelFor(m => m.ImageSrcString, "Location of image, either root directory or on the web")
-    @Html.TextBoxFor(m => m.Content)
+    @Html.TextBoxFor(m => m.ImageSrcString)
 
     <input type="submit" value="Add Article" />
 

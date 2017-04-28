@@ -13,7 +13,8 @@
     <h2>@Html.DisplayFor(m => article.Title)</h2>
     <p>@Html.DisplayFor(m => article.Content)</p>
     <img src="@article.ImageSrcString" alt="An image relating to fish"/>
+    <p>this is where the ImageSrcString would go: @Html.DisplayFor(m => article.ImageSrcString)</p>
     <hr />
 }
 
-@Html.Partial("AddArticle", new CodApp.Models.Article())
+@Html.Partial("AddArticle", new CodApp.Models.Article(), new ViewDataDictionary(new Microsoft.AspNetCore.Mvc.ModelBinding.EmptyModelMetadataProvider(), new Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary()) { { "NewsletterId", Model.Id } })
