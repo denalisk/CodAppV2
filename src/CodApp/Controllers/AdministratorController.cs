@@ -14,9 +14,75 @@ namespace CodApp.Controllers
     public class AdministratorController : Controller
     {
         // GET: /<controller>/
+        private readonly CodAppDbContext _db;
+        private readonly UserManager<Admin> _adminManager;
+        private readonly SignInManager<Admin> _signInManager;
+        public AdministratorController(UserManager<Admin> adminManager, SignInManager<Admin> signInManager, CodAppDbContext db)
+        {
+            _db = db;
+            _adminManager = adminManager;
+            _signInManager = signInManager;
+        }
+
         public IActionResult Index()
         {
             return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> LogOff()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Register(RegisterViewModel model)
+        {
+            var admin = new Admin { UserName = model.UserName, Email = model.Email };
+            IdentityResult result = await _adminManager.CreateAsync(admin, model.Password);
+            if (result.Succeeded)
+            {
+                var test = admin.Id;
+                var currentUser = await _adminManager.FindByIdAsync(admin.Id);
+                Microsoft.AspNetCore.Identity.SignInResult signInResult = await _signInManager.PasswordSignInAsync(model.UserName, model.Password, isPersistent: true, lockoutOnFailure: false);
+                if (signInResult.Succeeded)
+                {
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    return View();
+                }
+            }
+            else
+            {
+                return View();
+            }
+        }
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginViewModel model)
+        {
+            Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(model.UserName, model.Password, isPersistent: true, lockoutOnFailure: false);
+            if (result.Succeeded)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View();
+            }
         }
     }
 }
