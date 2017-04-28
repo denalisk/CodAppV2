@@ -19,5 +19,8 @@ namespace CodApp.Models
         }
 
         public DbSet<Reader> Readers { get; set; }
+        public DbSet<Newsletter> Newsletters { get; set; }
+        public DbSet<Article> Articles { get; set; }
+        public DbSet<Image> Images { get; set; }
     }
 }

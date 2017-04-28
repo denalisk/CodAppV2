@@ -8,9 +8,10 @@ using CodApp.Models;
 namespace CodApp.Migrations
 {
     [DbContext(typeof(CodAppDbContext))]
-    partial class CodAppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170428171457_MoreClasses")]
+    partial class MoreClasses
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")

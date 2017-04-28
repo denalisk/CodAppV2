@@ -7,14 +7,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CodApp.Models
 {
-    [Table("Newsletters")]
-    public class Newsletter
+    [Table("Images")]
+    public class Image
     {
         [Key]
         public int Id { get; set; }
-        public string Title { get; set; }
-        public string Content { get; set; }
-        public virtual ICollection<Article> Articles { get; set; }
-
+        public string SrcString { get; set; }
     }
 }
