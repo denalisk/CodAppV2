@@ -1,0 +1,23 @@
+﻿@model CodApp.Models.Reader
+
+<h3>Sign up for a our newsletter!</h3>
+
+@using (Html.BeginForm("AddReader", "Newsletter"))
+{
+    @Html.LabelFor(m => m.Name)
+    @Html.TextBoxFor(m => m.Name)
+
+    @Html.LabelFor(m => m.Email)
+    @Html.TextBoxFor(m => m.Email)
+
+    @Html.LabelFor(m => m.StreetAddress)
+    @Html.TextBoxFor(m => m.StreetAddress)
+
+    @Html.LabelFor(m => m.City)
+    @Html.TextBoxFor(m => m.City)
+
+    @Html.LabelFor(m => m.State)
+    @Html.TextBoxFor(m => m.State)
+
+    <input type="submit" value="Sign Up!" />
+}

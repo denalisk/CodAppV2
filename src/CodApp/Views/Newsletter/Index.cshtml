@@ -1,5 +1,10 @@
-﻿@{
+﻿@using CodApp.Models
+@model Reader
+
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h1>This is the newsletter page</h1>
+
+@Html.Partial("AddReader")
