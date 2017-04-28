@@ -1,6 +1,18 @@
-﻿@{ 
+﻿@model Dictionary<string, CodApp.Models.Article>
+
+@{ 
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>This is the home page</h1>
-
+<div class="container">
+    <div class="splash-image">
+        <img src="@Model["Banner"].ImageSrcString" alt="A banner image" />
+        <div class="splash-title">
+            <h3>@Model["Banner"].Title</h3>
+            <hr>
+            <p>
+                @Model["Banner"].Content
+            </p>
+        </div>
+    </div>
+</div>
