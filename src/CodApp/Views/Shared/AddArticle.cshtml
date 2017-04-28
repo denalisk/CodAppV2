@@ -1,0 +1,18 @@
+﻿@model CodApp.Models.Article
+
+<h2>Add an article</h2>
+
+@using (Html.BeginForm("AddArticle", "Newsletter"))
+{
+    @Html.LabelFor(m => m.Title)
+    @Html.TextBoxFor(m => m.Title)
+
+    @Html.LabelFor(m => m.Content)
+    @Html.TextBoxFor(m => m.Content)
+
+    @Html.LabelFor(m => m.ImageSrcString, "Location of image, either root directory or on the web")
+    @Html.TextBoxFor(m => m.Content)
+
+    <input type="submit" value="Add Article" />
+
+}

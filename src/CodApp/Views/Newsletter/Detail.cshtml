@@ -12,6 +12,8 @@
 {
     <h2>@Html.DisplayFor(m => article.Title)</h2>
     <p>@Html.DisplayFor(m => article.Content)</p>
-    <img src="@article.Image.SrcString" alt="An image relating to fish"/>
+    <img src="@article.ImageSrcString" alt="An image relating to fish"/>
     <hr />
 }
+
+@Html.Partial("AddArticle", new CodApp.Models.Article())

@@ -22,7 +22,8 @@ namespace CodApp.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            return View();
+            var newsletters = _db.Newsletters.ToList();
+            return View(newsletters);
         }
 
         public IActionResult AddReader(Reader reader)
@@ -37,7 +38,6 @@ namespace CodApp.Controllers
         {
             var currentNewsletter = _db.Newsletters
                 .Include(m => m.Articles)
-                .ThenInclude(n => n.Image)
                 .FirstOrDefault(m => m.Id == id);
             return View(currentNewsletter);
         }
@@ -53,7 +53,9 @@ namespace CodApp.Controllers
             var newNewsletter = new Newsletter { Title = newsletter.Title, Content = newsletter.Content };
             _db.Newsletters.Add(newNewsletter);
             _db.SaveChanges();
-            return View("Index");
+            return RedirectToAction("Index");
         }
+
+
     }
 }

@@ -1,3 +1,16 @@
-﻿@{
+﻿@model CodApp.Models.Newsletter
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(m => m.Title)
+    @Html.TextBoxFor(m => m.Title)
+
+    @Html.LabelFor(m => m.Content)
+    @Html.TextBoxFor(m => m.Content)
+
+    <input type="submit" value="Add Newsletter" />
+
 }
