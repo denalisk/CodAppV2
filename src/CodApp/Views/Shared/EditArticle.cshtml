@@ -1,0 +1,21 @@
+﻿@model CodApp.Models.Article
+
+<h3>Edit this article:</h3>
+
+@using (Html.BeginForm("EditArticle", "Newsletter"))
+{
+    @Html.Hidden("NewsletterId")
+    @Html.HiddenFor(m => m.Id)
+
+    @Html.LabelFor(m => m.Title)
+    @Html.TextBoxFor(m => m.Title)
+
+    @Html.LabelFor(m => m.Content)
+    @Html.TextBoxFor(m => m.Content)
+
+    @Html.LabelFor(m => m.ImageSrcString, "Location of image, either root directory or on the web")
+    @Html.TextBoxFor(m => m.ImageSrcString)
+
+    <input type="submit" value="Save Changes" />
+
+}

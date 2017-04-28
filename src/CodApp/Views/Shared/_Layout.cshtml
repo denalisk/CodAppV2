@@ -3,27 +3,29 @@
 <html>
 <head>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="~/CSS/styles.css" />
     <meta name="viewport" content="width=device-width" />
     <title>Son of Cod</title>
 </head>
 <body>
     <div>
-        <h2>
-            @Html.ActionLink("Register a new Admin", "Register", "Administrator")
+        <nav class="navbar nav mynavbar">
+            <div class="">
+                <div class="overlay-images">
+                    <img src="~/Images/fishcan.png" alt="Canned fish decal" />
+                </div>
+                <div class="top-section">
+                </div>
+                <div class="bottom-section">
+                    <div class="link-holder">
+                    @Html.ActionLink("Home", "Index", "Home") | @Html.ActionLink("Newsletter", "Index", "Newsletter")
+                    </div>
+                </div>
 
-        </h2>
-        <h2>
-            @Html.ActionLink("Login as an Admin", "Login", "Administrator")
-
-        </h2>
-        <h2>
-            @Html.ActionLink("View the Newsletter", "Index", "Newsletter")
-
-        </h2>
-        <h2>
-            @Html.ActionLink("Go Home", "Index", "Home")
-
-        </h2>
+            </div>
+        </nav>
+        <div class="top-buffer">
+        </div>
         @RenderBody()
     </div>
 </body>

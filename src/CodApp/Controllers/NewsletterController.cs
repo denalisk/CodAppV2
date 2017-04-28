@@ -14,7 +14,7 @@ namespace CodApp.Controllers
 {
     public class NewsletterController : Controller
     {
-        private readonly CodAppDbContext _db;
+        private CodAppDbContext _db;
         public NewsletterController(CodAppDbContext db)
         {
             _db = db;
@@ -64,6 +64,17 @@ namespace CodApp.Controllers
             var newArticle = new Article { Title = article.Title, Content = article.Content, ImageSrcString = article.ImageSrcString };
             newArticle.Newsletter = currentNewsletter;
             _db.Articles.Add(newArticle);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult EditArticle(Article article)
+        {
+            int targetNewsletterId = Int32.Parse(this.Request.Form["NewsletterId"]);
+            var currentNewsletter = _db.Newsletters.FirstOrDefault(newsletters => newsletters.Id == targetNewsletterId);
+            article.Newsletter = currentNewsletter;
+            _db.Entry(article).State = EntityState.Modified;
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
