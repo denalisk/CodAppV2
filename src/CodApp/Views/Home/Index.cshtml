@@ -15,4 +15,77 @@
             </p>
         </div>
     </div>
+    <div class="row">
+        <div class="container">
+            <div class="lead-marketing-section">
+                <h1> --- @Model["Tagline"].Title ---</h1>
+                <p>
+                    @Model["Tagline"].Content
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="content-container">
+        <div class="row">
+            <div class="blurb1">
+                <div class="col-sm-6">
+                    <h3>@Model["Blurb1"].Title</h3>
+                    <p>
+                        @Model["Blurb1"].Content
+                    </p>
+                </div>
+                <div class="col-sm-6">
+                    <img src="@Model["Blurb1"].ImageSrcString" alt="A picture relating to fish" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <img src="@Model["Banner2"].ImageSrcString" alt="A banner image" />
+            <div class="splash2-title">
+                <h3>@Model["Banner2"].Title</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="blurb1">
+                <div class="col-sm-6">
+                    <h3>@Model["Blurb2"].Title</h3>
+                    <p>
+                        @Model["Blurb2"].Content
+                    </p>
+                </div>
+                <div class="col-sm-6">
+                    <img src="@Model["Blurb2"].ImageSrcString" alt="A picture relating to fish" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="mini-content">
+                <img src="@Model["Blurb3"].ImageSrcString" alt="More pictures!" />
+                <h3>@Model["Blurb3"].Title</h3>
+                <p>
+                    @Model["Blurb3"].Content
+                </p>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="mini-content">
+                <img src="@Model["Blurb4"].ImageSrcString" alt="More pictures!" />
+                <h3>@Model["Blurb4"].Title</h3>
+                <p>
+                    @Model["Blurb4"].Content
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bottom-banner">
+    <div class="banner3">
+        <div class="banner3-overlay">
+        </div>
+        <img src="@Model["Banner3"].ImageSrcString" alt="A banner image" />
+    </div>
+</div>
+<div class="bottom-bar">
 </div>

@@ -26,6 +26,13 @@ namespace CodApp.Controllers
             var currentArticle = _db.Articles.FirstOrDefault(m => m.Id == 1);
             Dictionary<string, Article> homeDictionary = new Dictionary<string, Article> { };
             homeDictionary["Banner"] = currentArticle;
+            homeDictionary["Tagline"] = currentArticle;
+            homeDictionary["Banner2"] = currentArticle;
+            homeDictionary["Banner3"] = currentArticle;
+            homeDictionary["Blurb1"] = currentArticle;
+            homeDictionary["Blurb2"] = currentArticle;
+            homeDictionary["Blurb3"] = currentArticle;
+            homeDictionary["Blurb4"] = currentArticle;
             return View(homeDictionary);
         }
     }
