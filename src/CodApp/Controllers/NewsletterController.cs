@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using CodApp.Models;
 using Microsoft.AspNetCore.Identity;
 using CodApp.ViewModels;
+using Microsoft.EntityFrameworkCore;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -30,6 +31,15 @@ namespace CodApp.Controllers
             _db.Readers.Add(newReader);
             _db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        public IActionResult Detail(int id)
+        {
+            var currentNewsletter = _db.Newsletters
+                .Include(m => m.Articles)
+                .ThenInclude(n => n.Image)
+                .FirstOrDefault(m => m.Id == id);
+            return View(currentNewsletter);
         }
     }
 }

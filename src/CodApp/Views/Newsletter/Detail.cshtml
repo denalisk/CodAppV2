@@ -1,0 +1,17 @@
+﻿@model CodApp.Models.Newsletter
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@Html.DisplayFor(m => m.Title)</h1>
+<h3>@Html.DisplayFor(m => m.Content)</h3>
+<hr />
+
+@foreach(var article in @Model.Articles)
+{
+    <h2>@Html.DisplayFor(m => article.Title)</h2>
+    <p>@Html.DisplayFor(m => article.Content)</p>
+    <img src="@article.Image.SrcString" alt="An image relating to fish"/>
+    <hr />
+}

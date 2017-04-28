@@ -1,5 +1,5 @@
 ﻿@using CodApp.Models
-@model Newsletter
+@model ICollection<Newsletter>
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -8,3 +8,11 @@
 <h1>This is the newsletter page</h1>
 
 @Html.Partial("AddReader", new CodApp.Models.Reader())
+
+
+@foreach (var newsletter in Model)
+{
+    @Html.ActionLink(newsletter.Title, "Detail", new { id = newsletter.Id })
+}
+
+@Html.ActionLink("Create a new Newsletter", "Create")
