@@ -7,6 +7,7 @@ using CodApp.Models;
 using Microsoft.AspNetCore.Identity;
 using CodApp.ViewModels;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -42,6 +43,14 @@ namespace CodApp.Controllers
             return View(currentNewsletter);
         }
 
+        [Authorize]
+        public IActionResult Readers()
+        {
+            var readerList = _db.Readers.ToList();
+            return View(readerList);
+        }
+
+        [Authorize]
         public IActionResult Create()
         {
             return View();

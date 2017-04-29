@@ -7,6 +7,11 @@
 
 <h1>This is the newsletter page</h1>
 
+@if (User.Identity.IsAuthenticated)
+{
+    <p>@Html.ActionLink("View the current Reader List", "Readers")</p>
+}
+
 @Html.Partial("AddReader", new CodApp.Models.Reader())
 
 
@@ -15,4 +20,7 @@
     @Html.ActionLink(newsletter.Title, "Detail", new { id = newsletter.Id })
 }
 
-@Html.ActionLink("Create a new Newsletter", "Create")
+@if (User.Identity.IsAuthenticated)
+{
+    @Html.ActionLink("Create a new Newsletter", "Create")
+}

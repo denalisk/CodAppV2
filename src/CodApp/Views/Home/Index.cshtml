@@ -8,7 +8,10 @@
     @if (User.Identity.IsAuthenticated)
     {
         <p>@Html.ActionLink("Edit This Page", "EditHome")</p>
-        <p>@Html.ActionLink("Log Out", "Logout", "Administrator")</p>
+        @using (Html.BeginForm("Logoff", "Administrator"))
+        {
+            <input type="submit" value="Log Out" class="btn btn-warning" />
+        }
     }
     <div class="splash-image">
         <img src="@Model["Banner"].ImageSrcString" alt="A banner image" />
