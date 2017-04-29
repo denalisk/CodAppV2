@@ -5,17 +5,20 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>This is the newsletter page</h1>
+<br>
 
 @if (User.Identity.IsAuthenticated)
 {
+  <div class="well">
     <p>@Html.ActionLink("View the current Reader List", "Readers")</p>
+  </div>
 }
 
 @Html.Partial("AddReader", new CodApp.Models.Reader())
 
 
-@foreach (var newsletter in Model)
+
+<!-- @foreach (var newsletter in Model)
 {
     @Html.ActionLink(newsletter.Title, "Detail", new { id = newsletter.Id })
 }
@@ -23,4 +26,4 @@
 @if (User.Identity.IsAuthenticated)
 {
     @Html.ActionLink("Create a new Newsletter", "Create")
-}
+} -->

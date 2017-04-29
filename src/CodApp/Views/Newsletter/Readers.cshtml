@@ -4,14 +4,18 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<ol class="mailing-list">
-    Current Mailing List:
-    @foreach (var reader in Model)
-    {
+<div class="container">
+  <div class="well">
+    <ol class="mailing-list">
+      Current Mailing List:
+      @foreach (var reader in Model)
+      {
         <li>
-            <ul>@reader.Name from @reader.City:
-                <li>@reader.Email</li>
-            </ul>
+        <ul>@reader.Name from @reader.City:
+        <li>@reader.Email</li>
+        </ul>
         </li>
-    }
-</ol>
+      }
+    </ol>
+  </div>    
+</div>
