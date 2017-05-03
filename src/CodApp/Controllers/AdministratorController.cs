@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using CodApp.Models;
 using Microsoft.AspNetCore.Identity;
 using CodApp.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -24,6 +25,7 @@ namespace CodApp.Controllers
             _signInManager = signInManager;
         }
 
+        [Authorize]
         public IActionResult Index()
         {
             return View();
@@ -33,9 +35,10 @@ namespace CodApp.Controllers
         public async Task<IActionResult> LogOff()
         {
             await _signInManager.SignOutAsync();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "HomeController");
         }
 
+        [Authorize]
         public IActionResult Register()
         {
             return View();

@@ -2,4 +2,25 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>This is the Admin home</h1>
+<div class="container">
+  <div class="jumbotron">
+    <h1>Welcome back!</h1>
+  </div>
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <h3>Administrator Quick Options</h3>
+    </div>
+    <div class="panel-body">
+      @Html.ActionLink("View the Newletter Reader List", "Readers", "Newsletter")
+      <hr>
+      @Html.ActionLink("Edit the Homepage", "EditHome", "Home")
+      <hr>
+      @Html.ActionLink("Add an Administrator", "Register", "Administrator")
+      <hr>
+      @using (Html.BeginForm("Logoff", "Administrator"))
+      {
+        <input type="submit" value="Log Out" class="btn btn-warning" />
+      }
+    </div>
+  </div>
+</div>

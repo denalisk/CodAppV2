@@ -18,7 +18,15 @@
                 </div>
                 <div class="bottom-section">
                     <div class="link-holder container">
-                    @Html.ActionLink("Home", "Index", "Home") | @Html.ActionLink("Newsletter", "Index", "Newsletter") | @Html.ActionLink("Admin Login", "Login", "Administrator")
+                    @Html.ActionLink("Home", "Index", "Home") | @Html.ActionLink("Newsletter", "Index", "Newsletter") |
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        @Html.ActionLink("Admin Home", "Index", "Administrator")
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Admin Login", "Login", "Administrator")
+                    }
                     </div>
                 </div>
 

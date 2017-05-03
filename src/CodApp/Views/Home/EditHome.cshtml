@@ -1,30 +1,94 @@
-﻿@{ 
+﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @model Dictionary<string, CodApp.Models.Article>
 
-<h2>Main Banner</h2>
-@Html.Partial("EditArticle", @Model["Banner"], new ViewDataDictionary(new Microsoft.AspNetCore.Mvc.ModelBinding.EmptyModelMetadataProvider(), new Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary()) { { "NewsletterId", 0 } })
+<div class="container">
+  <div class="panel panel-warning">
+    <div class="panel-heading">
+      <h2>Main Banner</h2>
+    </div>
+    <div class="panel-body">
+      @Html.Partial("EditArticle", @Model["Banner"], new ViewDataDictionary(new Microsoft.AspNetCore.Mvc.ModelBinding.EmptyModelMetadataProvider(), new Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary()) { { "NewsletterId", 0 } })
+    </div>
+  </div>
+</div>
 
 <hr />
-<h2>Tagline</h2>
-@Html.Partial("EditArticle", @Model["Tagline"], new ViewDataDictionary(new Microsoft.AspNetCore.Mvc.ModelBinding.EmptyModelMetadataProvider(), new Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary()) { { "NewsletterId", 0 } })
+<div class="container">
+  <div class="panel panel-warning">
+    <div class="panel-heading">
+      <h2>Tagline</h2>
+    </div>
+    <div class="panel-body">
+      @Html.Partial("EditArticle", @Model["Tagline"], new ViewDataDictionary(new Microsoft.AspNetCore.Mvc.ModelBinding.EmptyModelMetadataProvider(), new Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary()) { { "NewsletterId", 0 } })
+    </div>
+  </div>
+</div>
 <hr />
-<h2>Banner 2</h2>
-@Html.Partial("EditArticle", @Model["Banner2"], new ViewDataDictionary(new Microsoft.AspNetCore.Mvc.ModelBinding.EmptyModelMetadataProvider(), new Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary()) { { "NewsletterId", 0 } })
+<div class="container">
+  <div class="panel panel-warning">
+    <div class="panel-heading">
+      <h2>Banner 2</h2>
+    </div>
+    <div class="panel-body">
+      @Html.Partial("EditArticle", @Model["Banner2"], new ViewDataDictionary(new Microsoft.AspNetCore.Mvc.ModelBinding.EmptyModelMetadataProvider(), new Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary()) { { "NewsletterId", 0 } })
+    </div>
+  </div>
+</div>
 <hr />
-<h2>Bottom Banner</h2>
-@Html.Partial("EditArticle", @Model["Banner3"], new ViewDataDictionary(new Microsoft.AspNetCore.Mvc.ModelBinding.EmptyModelMetadataProvider(), new Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary()) { { "NewsletterId", 0 } })
+<div class="container">
+  <div class="panel panel-warning">
+    <div class="panel-heading">
+      <h2>Bottom Banner</h2>
+    </div>
+    <div class="panel-body">
+      @Html.Partial("EditArticle", @Model["Banner3"], new ViewDataDictionary(new Microsoft.AspNetCore.Mvc.ModelBinding.EmptyModelMetadataProvider(), new Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary()) { { "NewsletterId", 0 } })
+    </div>
+  </div>
+</div>
 <hr />
-<h2>Blurb 1</h2>
-@Html.Partial("EditArticle", @Model["Blurb1"], new ViewDataDictionary(new Microsoft.AspNetCore.Mvc.ModelBinding.EmptyModelMetadataProvider(), new Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary()) { { "NewsletterId", 0 } })
+<div class="container">
+  <div class="panel panel-warning">
+    <div class="panel-heading">
+      <h2>Blurb 1</h2>
+    </div>
+    <div class="panel-body">
+      @Html.Partial("EditArticle", @Model["Blurb1"], new ViewDataDictionary(new Microsoft.AspNetCore.Mvc.ModelBinding.EmptyModelMetadataProvider(), new Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary()) { { "NewsletterId", 0 } })
+    </div>
+  </div>
+</div>
 <hr />
-<h2>Blurb 2</h2>
-@Html.Partial("EditArticle", @Model["Blurb2"], new ViewDataDictionary(new Microsoft.AspNetCore.Mvc.ModelBinding.EmptyModelMetadataProvider(), new Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary()) { { "NewsletterId", 0 } })
+<div class="container">
+  <div class="panel panel-warning">
+    <div class="panel-heading">
+      <h2>Blurb 2</h2>
+    </div>
+    <div class="panel-body">
+      @Html.Partial("EditArticle", @Model["Blurb2"], new ViewDataDictionary(new Microsoft.AspNetCore.Mvc.ModelBinding.EmptyModelMetadataProvider(), new Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary()) { { "NewsletterId", 0 } })
+    </div>
+  </div>
+</div>
 <hr />
-<h2>Blurb 3</h2>
-@Html.Partial("EditArticle", @Model["Blurb3"], new ViewDataDictionary(new Microsoft.AspNetCore.Mvc.ModelBinding.EmptyModelMetadataProvider(), new Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary()) { { "NewsletterId", 0 } })
+<div class="container">
+  <div class="panel panel-warning">
+    <div class="panel-heading">
+      <h2>Blurb 3</h2>
+    </div>
+    <div class="panel-body">
+      @Html.Partial("EditArticle", @Model["Blurb3"], new ViewDataDictionary(new Microsoft.AspNetCore.Mvc.ModelBinding.EmptyModelMetadataProvider(), new Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary()) { { "NewsletterId", 0 } })
+    </div>
+  </div>
+</div>
 <hr />
-<h2>Blurb 4</h2>
-@Html.Partial("EditArticle", @Model["Blurb4"], new ViewDataDictionary(new Microsoft.AspNetCore.Mvc.ModelBinding.EmptyModelMetadataProvider(), new Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary()) { { "NewsletterId", 0 } })
+<div class="container">
+  <div class="panel panel-warning">
+    <div class="panel-heading">
+      <h2>Blurb 4</h2>
+    </div>
+    <div class="panel-body">
+      @Html.Partial("EditArticle", @Model["Blurb4"], new ViewDataDictionary(new Microsoft.AspNetCore.Mvc.ModelBinding.EmptyModelMetadataProvider(), new Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary()) { { "NewsletterId", 0 } })
+    </div>
+  </div>
+</div>
