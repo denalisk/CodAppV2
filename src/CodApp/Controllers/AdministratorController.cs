@@ -35,7 +35,7 @@ namespace CodApp.Controllers
         public async Task<IActionResult> LogOff()
         {
             await _signInManager.SignOutAsync();
-            return RedirectToAction("Index", "HomeController");
+            return RedirectToAction("Index", "HomeController", new { area = "" });
         }
 
         [Authorize]
