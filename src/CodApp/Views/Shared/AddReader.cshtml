@@ -1,29 +1,45 @@
 ﻿@model CodApp.Models.Reader
-<div class="container">
-  @using (Html.BeginForm("AddReader", "Newsletter"))
+<div class="reader-form">
+  @using (Html.BeginForm("AddReader", "Newsletter", FormMethod.Post, new { id = "reader-submit" }))
   {
-    <div class="panel panel-success">
-      <div class="panel-heading">
-        <h3>Sign up for a our newsletter!</h3>
-        @Html.LabelFor(m => m.Name)
-        @Html.TextBoxFor(m => m.Name)
+    <div class="">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3>Sign up for a our newsletter!</h3>
+          @Html.LabelFor(m => m.Name)
+          @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+        </div>
+        <div class="panel-body">
+          <p>
+            @Html.LabelFor(m => m.Email)
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+            <br>
+            @Html.LabelFor(m => m.StreetAddress)
+            @Html.TextBoxFor(m => m.StreetAddress, new { @class = "form-control" })
+            <br>
+            @Html.LabelFor(m => m.City)
+            @Html.TextBoxFor(m => m.City, new { @class = "form-control" })
+            <br>
+            @Html.LabelFor(m => m.State)
+            @Html.TextBoxFor(m => m.State, new { @class = "form-control" })
+          </p>
+        </div>
       </div>
-      <div class="panel-body">
-        <p>
-          @Html.LabelFor(m => m.Email)
-          @Html.TextBoxFor(m => m.Email)
-          <br>
-          @Html.LabelFor(m => m.StreetAddress)
-          @Html.TextBoxFor(m => m.StreetAddress)
-          <br>
-          @Html.LabelFor(m => m.City)
-          @Html.TextBoxFor(m => m.City)
-          <br>
-          @Html.LabelFor(m => m.State)
-          @Html.TextBoxFor(m => m.State)
-        </p>
+      <div class="invalid">
+        <h4><span class="invalid">Please complete all fields</span></h4>
       </div>
+      <button type="button" id="reader-submit-button" class="btn btn-primary">Sign Up!</button>
+      <!-- <input type="submit" value="Sign Up!" class="btn btn-primary" /> -->
     </div>
-    <input type="submit" value="Sign Up!" class="btn btn-primary" />
   }
+</div>
+<div class="container success">
+  <div class="well">
+    <h2>You've been added to our list! We look forward to sending you information about fish!</h2>
+  </div>
+</div>
+<div class="container already-added">
+  <div class="well">
+    <h2>You're already on our mailing list! Good to see you again.</h2>
+  </div>
 </div>
