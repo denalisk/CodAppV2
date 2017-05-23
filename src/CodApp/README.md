@@ -6,24 +6,20 @@
 
 ## Description
 
-#### A simple website built for a fictitious fishmonger. Users can add themselves to a mailing list and read about the fish company, while administrators can add other administrators, edit the main page, and view the people who have signed up for the mailing list. The site implements basic User Authentication to separate anonymous users from administrators.
+#### A simple website built for a fictitious fishmonger as an exercise in ASP.NET Core and MSSQL database usage. Users can add themselves to a mailing list and read about the fish company, while administrators perform basic site management tasks. The site implements basic User Authentication to separate anonymous users from administrators.
 
 ## Specifications
 
-* Users may add themselves to the mailing list
+* Users may add themselves to the mailing list and view the newsletters
 * Admins can view the mailing list
-* Admins can edit content on the homepage
+* Admins can edit content on the homepage and create newsletters
+* Admins can add, edit, or delete articles in newsletters
 * Admins can add other Admins
 
-#### Stretch Goals
-
-* Re-implement mistakenly built newsletter adding and editing functionality
-* Increase styling similarities with target site
-
 ## Setup
->Requirements: Microsoft Visual Studio 2015
+>Requirements: Microsoft Visual Studio 2017
 * Clone this repository
-* Open the solution in visual studio 2015
+* Open the solution in visual studio 2017
 * In the directory CodApp run the command dotnet restore
 * In the directory CodApp>src>CodApp run the command dotnet ef database update ArticleRework
 * In the same directory, open the file script.sql in MSSQL Management Studio and execute it
@@ -36,7 +32,7 @@
 * C# with ASP.Net
 * MSSQL database manager
 
-[github link for this project](https://github.com/denalisk/codapp)
+[github link for this project](https://github.com/denalisk/codappv2)
 
 ##### Copyright (c) 2017 Sam Kirsch.
 
