@@ -155,7 +155,7 @@ div.text-content {
 div.mini-content {
   position: relative;
   width: 100%;
-  height: 25vh;
+  min-height: 25vh;
   overflow: hidden;
   margin: 10vh 0vh 10vh 0vh;
 }
@@ -175,7 +175,7 @@ div.success {
   display: none;
 }
 
-div.already-added {
+div.already-added, div.changes-saved {
   display: none;
 }
 

@@ -20,8 +20,8 @@
       <div class="panel-heading">
         <h2>@Html.DisplayFor(m => article.Title)</h2>
       </div>
-      <div class="panel-body">
-        <p>@Html.DisplayFor(m => article.Content)</p>
+      <div class="panel-body" id="content-article-@article.Id">
+        <p><span>@Html.DisplayFor(m => article.Content)</span></p>
       <div class="detail-image">
         <img src="@article.ImageSrcString" alt="An image relating to fish"/>
       </div>
@@ -31,13 +31,19 @@
       }
     </div>
     </div>
-    <div class="article-edit-partial" id="edit-article-@article.Id" class="col-md-6">
+    <div class="article-edit-partial" id="edit-article-@article.Id">
       @Html.Partial("EditArticle", article, new ViewDataDictionary(new Microsoft.AspNetCore.Mvc.ModelBinding.EmptyModelMetadataProvider(), new Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary()) { { "NewsletterId", Model.Id } })
       @using (Html.BeginForm("DeleteArticle", "Newsletter"))
       {
         <input type="hidden" id="Id" name="Id" value="@article.Id" />
         <input type="submit" class="btn btn-danger" value="Delete Article" action="DeleteArticle"/>
       }
+    </div>
+    <div class="changes-saved" id="saved-article-@article.Id">
+      <div class="well">
+        <h3>Changes saved!</h3>
+        <button class="edit-article-button btn btn-warning" type="button" name="button" value="@article.Id">Edit Again</button>
+      </div>
     </div>
   </div>
 }

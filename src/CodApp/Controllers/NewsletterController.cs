@@ -73,6 +73,12 @@ namespace CodApp.Controllers
             return View();
         }
 
+        public JsonResult GetArticle(int targetId)
+        {
+            var targetArticle = _db.Articles.FirstOrDefault(articles => articles.Id == targetId);
+            return Json(targetArticle);
+        }
+
         [HttpPost]
         public IActionResult Create(Newsletter newsletter)
         {
