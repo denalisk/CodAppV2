@@ -35,7 +35,7 @@
     }
   })
 
-  // Ajax call to submit article edits without having to reload the page
+  // Ajax call to submit article edits
   $("#new-edit").submit(function(event) {
     event.preventDefault();
     console.log("Inside the new-edit call");
@@ -49,7 +49,7 @@
       type: 'POST',
       data: targetArticle,
       success: function(result) {
-        console.log("success!");
+        window.location.reload(true);
       },
       error: function(result, exception) {
         console.log("There was a problem with the request");

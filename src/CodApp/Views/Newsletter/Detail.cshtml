@@ -32,13 +32,13 @@
     </div>
     <div class="article-edit-partial" id="edit-article-@article.Id" class="col-md-6">
       @Html.Partial("EditArticle", article, new ViewDataDictionary(new Microsoft.AspNetCore.Mvc.ModelBinding.EmptyModelMetadataProvider(), new Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary()) { { "NewsletterId", Model.Id } })
-      @using (Html.BeginForm("DeleteArticle", "Newsletter")) {
-        @Html.HiddenFor(article => article.Id)
+      @using (Html.BeginForm("DeleteArticle", "Newsletter"))
+      {
+        <input type="hidden" id="Id" name="Id" value="@article.Id" />
         <input type="submit" class="btn btn-danger" value="Delete Article" action="DeleteArticle"/>
       }
     </div>
   </div>
-  <hr />
 
 }
 
