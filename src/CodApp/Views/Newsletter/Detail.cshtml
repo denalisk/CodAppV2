@@ -12,6 +12,7 @@
 <h3>@Html.DisplayFor(m => m.Content)</h3>
 <hr />
 
+<div class="row">
 @foreach(var article in @Model.Articles)
 {
   <div class="col-md-6">
@@ -39,9 +40,13 @@
       }
     </div>
   </div>
-
 }
-
-@Html.Partial("AddArticle", new CodApp.Models.Article(), new ViewDataDictionary(new Microsoft.AspNetCore.Mvc.ModelBinding.EmptyModelMetadataProvider(), new Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary()) { { "NewsletterId", Model.Id } })
+</div>
+@if (User.Identity.IsAuthenticated)
+{
+  <div class="row">
+    @Html.Partial("AddArticle", new CodApp.Models.Article(), new ViewDataDictionary(new Microsoft.AspNetCore.Mvc.ModelBinding.EmptyModelMetadataProvider(), new Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary()) { { "NewsletterId", Model.Id } })
+  </div>
+}
 
 </div>

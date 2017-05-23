@@ -4,17 +4,18 @@
 
 @using (Html.BeginForm("AddArticle", "Newsletter"))
 {
+  <div class="form-group">
     @Html.Hidden("NewsletterId")
 
     @Html.LabelFor(m => m.Title)
-    @Html.TextBoxFor(m => m.Title)
+    @Html.TextBoxFor(m => m.Title, new { @class = "form-control" })
 
     @Html.LabelFor(m => m.Content)
-    @Html.TextBoxFor(m => m.Content)
+    @Html.TextAreaFor(m => m.Content, new { @class = "form-control text-box" })
 
     @Html.LabelFor(m => m.ImageSrcString, "Location of image, either root directory or on the web")
-    @Html.TextBoxFor(m => m.ImageSrcString)
-
-    <input type="submit" value="Add Article" />
-
+    @Html.TextBoxFor(m => m.ImageSrcString, new { @class = "form-control" })
+    <br>
+    <input type="submit" value="Add Article" class="btn btn-success"/>
+  </div>
 }
